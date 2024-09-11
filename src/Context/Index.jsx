@@ -1,7 +1,26 @@
+import React from 'react';
+import { createContext, useState, useEffect } from 'react'
 
 
-function SectionsContext(){
-    const [count, setCount] = useState(0);
-    const [isCardVisible, setIsCardVisible] = useState(true);
-}
+export const CardsContext = createContext()
 
+export const CardsProvider = ({children}) => {
+
+    const [visibleCard,setVisibleCard] = useState(false);
+
+
+
+
+
+
+
+
+    return (
+        <CardsContext.Provider value={{
+            visibleCard,setVisibleCard,
+            
+
+        }}>{children}
+        </CardsContext.Provider>
+    );
+};
