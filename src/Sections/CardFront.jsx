@@ -1,9 +1,15 @@
 import './CardFront.css'
 import '../App.css'
-function CardFront (){
-    return(
+import React, { useContext } from 'react'
+import {CardsContext} from '../Context/Index'
 
-            <div className="cardBorder bg-gray-950">
+
+
+function CardFront (){
+    const context = useContext(CardsContext)
+    return(
+            
+            <div className={`cardBorder bg-gray-950 ${(context.visibleCard ?  'onScreen' : 'offScreen')}`}>
                 <div className="cardName bg-gray-950 text-center h-10 items-center ">Nombre</div>
 
                 <div className="cardImg w-full "><img src="https://th.bing.com/th/id/OIG2.H1VY0idA3cGHVUy8_NmE?pid=ImgGn" alt="Card Image" /></div>

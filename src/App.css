@@ -10,3 +10,13 @@
   width: 100vw;
   height: 100vh;
 }
+
+.onScreen{
+  display: block;
+  
+}
+
+.offScreen{
+  display: none;
+ 
+}
